@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eu te amo</title>
+
+
+    <style>
+
+
+    body{
+        background-color: #DDA0DD; /*cor do fundo*/
+
+    }
+
+        .painel {
+            margin: auto; /* deixar quadro no centro*/
+            background-color:  	#FFE4E1;
+            width: 500px; 
+            height: 600px;
+            border-radius: 20px; /*deixar borda aredondada*/
+            text-align: center; /*alinhar texto no centro*/
+            padding-top: 30px; /* abaixar o texto */
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+
+        #sim {
+            height: 40px; /* define o tamanho vertical do quadro*/
+            width: 50px; /*define o tamanho horizontal do quadro*/
+            background-color:  	#DDA0DD;
+            border: 2px solid white;  /*borda do quadro*/
+            border-radius: 10px;
+            color: white;
+            margin-left: -40px;
+        }
+
+        #nao {
+            position: absolute;
+            height: 40px; /* define o tamanho vertical do quadro*/
+            width: 50px; /*define o tamanho horizontal do quadro*/
+            background-color: 	#DDA0DD;
+            border: 2px solid white;  /*borda do quadro*/
+            border-radius: 10px;
+            color: white;
+            margin-left: 1%;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div class = "painel">
+        <h1>Feliz dia dos namorados</h1>
+        <img src="./gatinho.gif">
+        <h3> Aceita namorar comigo?</h3>
+
+        <a href="https://youtube.com/shorts/pRXsk_rqgjA?si=zmcPdfSChwx7qe4a"><button id="sim"> SIM!</button></a>
+        <button onmouseover="fuja()" id="nao"> NAO!</button>
+
+    </div>
+
+
+    <script>
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth; /* define pro botao não sair da tela */
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+    </script>
+
+
+</body>
+</html>
